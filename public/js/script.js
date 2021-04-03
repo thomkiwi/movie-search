@@ -11,7 +11,7 @@ form.addEventListener('submit', (e) => {
   messageOne.textContent = 'Loading...'
   messageTwo.textContent = ''
 
-  fetch('http://localhost:3000/movies?search=' + movie).then((response) => {
+  fetch('/movies?search=' + movie).then((response) => {
     response.json().then((data) => {
 
             console.log(data.data.Title);
