@@ -1,7 +1,7 @@
 const fetch = require("node-fetch")
 require('dotenv').config()
 
-const key = process.env.KEY;
+const key = process.env.OMDB_KEY;
 
 async function getMovies(movie) {
   const url = `http://www.omdbapi.com/?t=${movie}&apikey=${key}`;
