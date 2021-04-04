@@ -19,8 +19,14 @@ form.addEventListener('submit', (e) => {
             rating1.textContent = data.data.Ratings[0].Value;
             rating2.textContent = data.data.Ratings[1].Value;
             rating3.textContent = data.data.Ratings[2].Value;
-            movie_img.textContent = data.data.Poster;
+            // movie_img.textContent = data.data.Poster;
             // messageOne.textContent = ''
+            label_director.textContent = "Director";
+            label_writer.textContent = "Writer";
+            label_actors.textContent = "Actors";
+            director.textContent = data.data.Director;
+            writer.textContent = data.data.Writer;
+            actors.textContent = data.data.Actors;
         })
       })
   })

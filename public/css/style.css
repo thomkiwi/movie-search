@@ -119,15 +119,26 @@ header{
   font-size: 1.4em;
 }
 
-
-/* todo */
 .movie_details{
   padding: 12px;
   background-color: #fff;
 }
+.details-heading{
+  padding: 10px 0 5px 0;
+}
+.details-heading p{
+  color: #af74f2;
+  text-align: left;
+}
+.detail-item p {
+  color: #000;
+  font-size: 1.0em;
+  text-align: left;
+}
+
 img {
   width: 100%;
-  padding-top: 10px;
+
 }
 .img-container{
   padding: 15px;
