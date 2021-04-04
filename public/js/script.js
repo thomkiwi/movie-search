@@ -24,9 +24,11 @@ form.addEventListener('submit', (e) => {
             label_director.textContent = "Director";
             label_writer.textContent = "Writer";
             label_actors.textContent = "Actors";
+            label_plot.textContent = "Plot";
             director.textContent = data.data.Director;
             writer.textContent = data.data.Writer;
             actors.textContent = data.data.Actors;
+            plot.textContent = data.data.Plot;
         })
       })
   })
