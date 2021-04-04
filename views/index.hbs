@@ -1,28 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <title>movies!</title>
 </head>
+
 <body>
-<header>
+  <header>
 
-<form>
-  <input type="text" placeholder="search">
-  <button type="submit" name="button">Search</button>
-</form>
-</header>
-<div>
+    <form>
+      <input type="text" placeholder="search">
+      <button type="submit" name="button">Search</button>
+    </form>
+  </header>
+  <div>
 
-<p id="message-1"></p>
-<p id="message-2"></p>
+    <p id="message-1"></p>
+    <p id="message-2"></p>
 
-</div>
+  </div>
 
-<script src="/js/script.js"></script>
+  <div class="movie">
+
+    <div class="movie_header">
+      <h1 id="title"></h1>
+    </div>
+
+
+      <div class="movie_ratings">
+        <div>
+          <div class="ratings-heading">
+            <p id="imdb"></p>
+          </div>
+          <div class="ratings-item">
+            <p id="rating1"></p>
+          </div>
+        </div>
+
+        <div>
+          <div class="ratings-heading">
+            <p id="rotten_tomatoes"></p>
+          </div>
+          <div class="ratings-item">
+            <p id="rating2"></p>
+          </div>
+        </div>
+
+        <div>
+          <div class="ratings-heading">
+            <p id="metacritic"></p>
+          </div>
+          <div class="ratings-item">
+            <p id="rating3"></p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- <div class="img-container">
+        <img src="" id="movie_img" alt="movie poster">
+      </div> -->
+
+      <div class="movie_details">
+        <!-- <p>Director: James Cameron</p>
+        <p>Writer "James Cameron"</p>
+        <p>Release: "19 Dec 1997</p>
+        <p>Genre: "Drama, Romance"</p>
+        <p>Actors "Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates"</p>
+        <p>Plot "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic."</p> -->
+      </div>
+
+    </div>
+    <script src="/js/script.js"></script>
 
 </body>
+
 </html>

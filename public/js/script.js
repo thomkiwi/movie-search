@@ -8,15 +8,19 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const movie = input.value;
-  messageOne.textContent = 'Loading...'
-  messageTwo.textContent = ''
+  // messageOne.textContent = 'Loading...'
 
   fetch('/movies?search=' + movie).then((response) => {
     response.json().then((data) => {
-
-            console.log(data.data.Title);
-            messageOne.textContent = data.data.Title;
-            messageTwo.textContent = data.data.Year;
+            title.textContent = data.data.Title;
+            rotten_tomatoes.textContent = "Rotten Tomatoes";
+            imdb.textContent = "IMDB";
+            metacritic.textContent = "Metacrtic";
+            rating1.textContent = data.data.Ratings[0].Value;
+            rating2.textContent = data.data.Ratings[1].Value;
+            rating3.textContent = data.data.Ratings[2].Value;
+            movie_img.textContent = data.data.Poster;
+            // messageOne.textContent = ''
         })
       })
   })
