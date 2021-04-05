@@ -1,18 +1,17 @@
-const form = document.querySelector('form')
-const input = document.querySelector('input')
-
-const messageOne = document.querySelector('#message-1')
-const messageTwo = document.querySelector('#message-2')
+const form = document.querySelector('form');
+const input = document.querySelector('input');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const movie = input.value;
-  // messageOne.textContent = 'Loading...'
+  const search = input.value;
 
-  fetch('/movies?search=' + movie).then((response) => {
+  fetch('/movies?search=' + search).then((response) => {
     response.json().then((data) => {
-            title.textContent = data.data.Title;
+      const movie = document.querySelector('.movie').style.visibility = "visible";
+
+            title.innerHTML = `<a href="https://www.imdb.com/title/${data.data.imdbID}/" target="_blank" rel="noopener noreferrer">${data.data.Title}</a>`;
+            year.textContent = `(${data.data.Year})`;
             rotten_tomatoes.textContent = "Rotten Tomatoes";
             imdb.textContent = "IMDB";
             metacritic.textContent = "Metacrtic";
@@ -21,14 +20,15 @@ form.addEventListener('submit', (e) => {
             rating3.textContent = data.data.Ratings[2].Value;
             // movie_img.textContent = data.data.Poster;
             // messageOne.textContent = ''
-            label_director.textContent = "Director";
-            label_writer.textContent = "Writer";
-            label_actors.textContent = "Actors";
-            label_plot.textContent = "Plot";
+            label_director.textContent = "Director:";
+            label_writer.textContent = "Writer(s):";
+            label_actors.textContent = "Actors:";
+            label_plot.textContent = "Plot:";
             director.textContent = data.data.Director;
             writer.textContent = data.data.Writer;
             actors.textContent = data.data.Actors;
             plot.textContent = data.data.Plot;
+
         })
       })
   })
