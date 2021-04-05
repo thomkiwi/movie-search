@@ -20,6 +20,7 @@ input[type=text] {
   border: 0;
   border-bottom: 1px solid #eee;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  font-size: 1.1em;
 }
 a,
 p,
@@ -89,6 +90,8 @@ header{
 }
 .movie{
   background-color: #111;
+  border-radius: 10px 10px 10px 10px;
+  margin: 10px;
 }
 .movie_header{
   padding: 15px;
@@ -102,7 +105,7 @@ header{
 .movie_ratings{
   display: flex;
   justify-content: space-around;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
 }
 
 .ratings-heading{
@@ -120,8 +123,10 @@ header{
 }
 
 .movie_details{
-  padding: 12px;
+  padding: 12px 12px 24px 12px;
   background-color: #fff;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 .details-heading{
   padding: 10px 0 5px 0;
@@ -129,17 +134,17 @@ header{
 .details-heading p{
   color: #af74f2;
   text-align: left;
+  font-size: 0.9em;
 }
 .detail-item p {
-  color: #000;
+  color: #1f1e1e;
   font-size: 1.0em;
   text-align: left;
 }
 
-img {
+/* img {
   width: 100%;
-
 }
 .img-container{
   padding: 15px;
-}
+} */
