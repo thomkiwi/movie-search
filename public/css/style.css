@@ -1,3 +1,10 @@
+:root {
+  --purple: #2c1f86;
+  --lightpurple: #4032a8;
+  --pink: #ab47a9;
+  --lightpink: #c39bf1;
+}
+
 *,
 *:before,
 *:after {
@@ -7,8 +14,8 @@
 }
 body {
   background-color: #222;
-  display: block;
   font-family: 'Josefin Sans', sans-serif;
+  display: grid;
 }
 input[type=search] {
   width: 100%;
@@ -73,8 +80,8 @@ button:hover{
   box-shadow:  0 15px 4px rgba(7, 2, 28, 0.16);
 }
 header{
-  display: grid;
-  margin: 20px
+  margin: 20px;
+  max-width: 780px;
 }
 #answer {
   margin-top: 20px;
@@ -93,7 +100,6 @@ header{
 }
 #output {
   text-align: center;
-
   color: #555;
 }
 .movie{
@@ -101,6 +107,7 @@ header{
   border-radius: 10px 10px 10px 10px;
   margin: 10px;
   visibility: hidden;
+  max-width: 800px;
 }
 .movie_header{
   padding: 15px;
