@@ -30,7 +30,7 @@ input:focus {
   background-color: #444;
   outline: none;
   border-bottom: 2px solid #eee;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 0 0;
 }
 
 a,
@@ -40,19 +40,19 @@ input {
   text-align: center;
   color: #999;
   font-family: 'Josefin Sans', sans-serif;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 0 0;
 }
 a{
   text-decoration: none;
-  color: #ab47a9;
+  color: var(--pink);
 }
 
 a:hover {
-  color: #c39bf1;
+  color: var(--lightpink);
 }
 
 h1{
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 input[type=text]:focus {
   outline: none;
@@ -69,39 +69,21 @@ button {
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.16);
 
   font-weight: 600;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0 0 10px 10px;
   appearance: none;
   -webkit-appearance: none;
 }
 button:hover{
   transition: ease;
   border: 0;
-  background-color: #2c1f86;
+  background-color: var(--purple);
   box-shadow:  0 15px 4px rgba(7, 2, 28, 0.16);
 }
 header{
   margin: 20px;
   max-width: 780px;
 }
-#answer {
-  margin-top: 20px;
-  padding: 20px;
-}
 
-#input {
-  width: 500px;
-  margin-top: 25px;
-  padding: 30px 20px 20px 20px;
-
-  border: 0;
-  border-bottom: 1px solid #eee;
-  border-radius: 15px;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-}
-#output {
-  text-align: center;
-  color: #555;
-}
 .movie{
   background-color: #111;
   border-radius: 10px 10px 10px 10px;
@@ -112,10 +94,6 @@ header{
 .movie_header{
   padding: 15px;
   text-align: center;
-}
-.movie_header h1 {
-  color: #ab47a9;
-  font-size: 1.5em;
 }
 /* row 2 */
 .movie_ratings{
@@ -144,14 +122,14 @@ header{
 .movie_details{
   padding: 12px 12px 24px 12px;
   background-color: #fff;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0 0 10px 10px;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 .details-heading{
   padding: 10px 0 5px 0;
 }
 .details-heading p{
-  color:#ab47a9;;
+  color:var(--pink);
   text-align: left;
   font-size: 0.9em;
 }
