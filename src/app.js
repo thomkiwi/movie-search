@@ -24,8 +24,8 @@ app.get('/movies', (req, res) => {
         search: req.query.search
       })
     })
-    .catch(e => {
-    console.log('There has been a problem with your fetch operation: ' + e.message);
+    .catch(error => {
+      error.message;
   });
 })
 
