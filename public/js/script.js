@@ -12,50 +12,50 @@ form.addEventListener('submit', (e) => {
 
       const { Title, Year, imdbID, Director, Writer, Actors, Plot, Ratings, Type  } = data;
       
-      if (Type !== "movie"){
-        // handle when it's not a movie 
-        title.textContent = `No movie found with title of '${search}'. Please search again.`;
-        title.style.visibility = "visible";
-        year.style.visibility = "hidden";
+        if (Type !== "movie"){
+      
+          // handle when it's not a movie (tv show for example)
 
-        rotten_tomatoes.textContent = "Rotten Tomatoes";
-        imdb.textContent = "IMDB";
-        metacritic.textContent = "Metacrtic";
+          // create a div
+          const text = document.createElement('p');
+          text.classList.add('warning-text')
+          text.textContent = `No movie found with the title of '${search}'. Please search again.`
+          
+          // create a p tag
+          const warning = document.createElement('div');
+          warning.classList.add('warning')
 
-        rating1.textContent = "-";
-        rating2.textContent = "-";
-        rating3.textContent = "-";
+          warning.appendChild(text)
 
-        label_director.textContent = "Director:";
-        label_writer.textContent = "Writer(s):";
-        label_actors.textContent = "Actors:";
-        label_plot.textContent = "Plot:";
-        director.textContent = "-";
-        writer.textContent = "-";
-        actors.textContent = "-";
-        plot.textContent = "-";
-      } else {
-      const movie = document.querySelector('.movie').style.visibility = "visible";
+          // add to DOM
+          main = document.querySelector('.main')
+          console.log(main)
+          main.appendChild(warning);
 
-            title.innerHTML = `<a href="https://www.imdb.com/title/${imdbID}/" target="_blank" rel="noopener noreferrer">${Title}</a>`;
-            year.textContent = `(${Year})`;
-            rotten_tomatoes.textContent = "Rotten Tomatoes";
-            imdb.textContent = "IMDB";
-            metacritic.textContent = "Metacrtic";
+        } else {
+        // shouldn't be needed as there is no movie div in the HTML ..should be dynamic
+         const movie = document.querySelector('.movie').style.visibility = "visible";
 
-            rating1.textContent = Ratings[0].Value;
-            rating2.textContent = Ratings[1].Value;
-            rating3.textContent = Ratings[2].Value;
+              // create HTML divs etc
+              title.innerHTML = `<a href="https://www.imdb.com/title/${imdbID}/" target="_blank" rel="noopener noreferrer">${Title}</a>`;
+              year.textContent = `(${Year})`;
+              rotten_tomatoes.textContent = "Rotten Tomatoes";
+              imdb.textContent = "IMDB";
+              metacritic.textContent = "Metacrtic";
 
-            label_director.textContent = "Director:";
-            label_writer.textContent = "Writer(s):";
-            label_actors.textContent = "Actors:";
-            label_plot.textContent = "Plot:";
-            director.textContent = Director;
-            writer.textContent = Writer;
-            actors.textContent = Actors;
-            plot.textContent = Plot;
-      } 
+              rating1.textContent = Ratings[0].Value;
+              rating2.textContent = Ratings[1].Value;
+              rating3.textContent = Ratings[2].Value;
+
+              label_director.textContent = "Director:";
+              label_writer.textContent = "Writer(s):";
+              label_actors.textContent = "Actors:";
+              label_plot.textContent = "Plot:";
+              director.textContent = Director;
+              writer.textContent = Writer;
+              actors.textContent = Actors;
+              plot.textContent = Plot;
+        } 
         })
       })
   })
