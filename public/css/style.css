@@ -1,6 +1,6 @@
 :root {
-  --purple: #2c1f86;
-  --lightpurple: #4032a8;
+  --purple: #1f8686;
+  --lightpurple: #32a850;
   --pink: #ab47a9;
   --lightpink: #c39bf1;
 }
@@ -56,6 +56,7 @@ a:hover {
 
 h1{
   font-size: 1.5em;
+  color:#eee;
 }
 input[type=text]:focus {
   outline: none;
@@ -68,7 +69,7 @@ button {
 
   color: #fff;
   border: none;
-  background-color: #4032a8;
+  background-color: #32a86d;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.16);
 
   font-weight: 600;
