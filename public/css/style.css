@@ -1,8 +1,11 @@
 :root {
-  --purple: #1f8686;
-  --lightpurple: #32a850;
-  --pink: #ab47a9;
-  --lightpink: #c39bf1;
+  --green1: #4db97a;
+  --green2: #32a850;
+  --white: #fff;
+  --lesswhite: #eee;
+  --dark1: #111;
+  --dark2: #222;
+  --lessdark: #444;
 }
 
 *,
@@ -13,7 +16,7 @@
   font-size: 1.0em;
 }
 body {
-  background-color: #222;
+  background-color: var(--dark2);
   font-family: 'Josefin Sans', sans-serif;
 }
 .main {
@@ -23,14 +26,14 @@ body {
 input[type=search] {
   width: 100%;
   padding: 10px;
-  background-color: #333;
+  background-color: var(--dark3);
   border: 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--lesswhite);
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
   font-size: 1.1em;
 }
 input:focus {
-  background-color: #444;
+  background-color: var(--lessdark);
   outline: none;
   border-bottom: 2px solid #eee;
   border-radius: 10px 10px 0 0;
@@ -47,16 +50,16 @@ input {
 }
 a{
   text-decoration: none;
-  color: var(--pink);
+  color: var(--green1);
 }
 
 a:hover {
-  color: var(--lightpink);
+  color: var(--green2);
 }
 
 h1{
   font-size: 1.5em;
-  color:#eee;
+  color: var(--lesswhite);
 }
 input[type=text]:focus {
   outline: none;
@@ -67,9 +70,9 @@ button {
 
   cursor: pointer;
 
-  color: #fff;
+  color: var(--white);
   border: none;
-  background-color: #32a86d;
+  background-color: var(--green1);
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.16);
 
   font-weight: 600;
@@ -80,15 +83,15 @@ button {
 button:hover{
   transition: ease;
   border: 0;
-  background-color: var(--purple);
+  background-color: var(--green2);
   box-shadow:  0 15px 4px rgba(7, 2, 28, 0.16);
 }
 header {
   margin: 20px;
 }
 
-.movie{
-  background-color: #111;
+.movie {
+  background-color: var(--dark1);
   border-radius: 10px;
   margin: 10px;
 }
@@ -116,13 +119,13 @@ header {
   justify-content: space-around;
 }
 .ratings-item p {
-  color: #fff;
+  color: var(--white);
   font-size: 1.4em;
 }
 
 .movie_details{
   padding: 12px 12px 24px 12px;
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 0 0 10px 10px;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
@@ -130,7 +133,7 @@ header {
   padding: 10px 0 5px 0;
 }
 .details-heading p{
-  color:var(--pink);
+  color:var(--green2);
   text-align: left;
   font-size: 0.9em;
 }
