@@ -28,12 +28,15 @@ form.addEventListener('submit', (e) => {
     response.json().then((dataObj) => {
       const data = dataObj.data;
 
-      const { Title, Year, imdbID, Director, Writer, Actors, Plot, Ratings, Type  } = data;
-      
+      const { Title, Year, imdbID, Director, Writer, Actors, Plot, Ratings = 8, Type  } = data;
+
+      console.log(data)
         if (Type !== "movie"){
           // handle when it's not a movie (tv show for example)
+          movie.innerHTML = ''
           text.textContent = `No movie found with the title of '${search}'. Please search again.`
         } else {
+             text.textContent = ''
               movie.innerHTML = 
               `<div class="movie_header">
                 <h1 id="title">
@@ -100,7 +103,6 @@ form.addEventListener('submit', (e) => {
                 <p id="plot">${Plot}</p>
               </div>
             </div>`
-
             } 
         })
       })
