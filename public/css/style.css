@@ -33,7 +33,7 @@ input[type=search] {
   font-size: 1.1em;
 }
 input:focus {
-  background-color: var(--lessdark);
+  background-color: var(--dark2);
   outline: none;
   border-bottom: 2px solid #eee;
   border-radius: 10px 10px 0 0;
@@ -110,7 +110,7 @@ header {
   display: flex;
   justify-content: space-around;
 }
-.ratings-heading p{
+.ratings-heading p {
   font-size: 0.8em;
 }
 .ratings-item{
@@ -123,16 +123,16 @@ header {
   font-size: 1.4em;
 }
 
-.movie_details{
+.movie_details {
   padding: 12px 12px 24px 12px;
   background-color: var(--white);
   border-radius: 0 0 10px 10px;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
-.details-heading{
+.details-heading {
   padding: 10px 0 5px 0;
 }
-.details-heading p{
+.details-heading p {
   color:var(--green2);
   text-align: left;
   font-size: 0.9em;
@@ -141,4 +141,17 @@ header {
   color: #1f1e1e;
   font-size: 1.0em;
   text-align: left;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:var(--dark2);
+  color: var(--lesswhite);
+  text-align: center;
+  padding: 1rem;
+}
+.footer p {
+  font-size: 0.8em;
 }
