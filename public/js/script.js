@@ -28,14 +28,16 @@ form.addEventListener('submit', (e) => {
     response.json().then((dataObj) => {
       const data = dataObj.data;
 
-      const { Title, Year, imdbID, Director, Writer, Actors, Plot, Ratings = 8, Type  } = data;
-
+      const { Title, Year, imdbID, Director, Writer, Actors, Plot, Ratings, Type  } = data;
       console.log(data)
+
         if (Type !== "movie"){
           // handle when it's not a movie (tv show for example)
           movie.innerHTML = ''
           text.textContent = `No movie found with the title of '${search}'. Please search again.`
-        } else {
+        } 
+        
+        if (Type === "movie"){
              text.textContent = ''
               movie.innerHTML = 
               `<div class="movie_header">
@@ -43,38 +45,38 @@ form.addEventListener('submit', (e) => {
                   <a href="https://www.imdb.com/title/${imdbID}/" target="_blank" rel="noopener noreferrer">${Title}</a>
                 </h1>
                 <p id="year">(${Year})</p>
-               </div>
-        
-            <div class="movie_ratings">
+               </div>`
+
+        movie.innerHTML +=
+            `<div class="movie_ratings">
               <div>
                 <div class="ratings-heading">
                   <p id="imdb">IMDB</p>
                 </div>
                 <div class="ratings-item">
-                  <p id="rating1">${Ratings[0].Value}</p>
+                  <p id="rating1"> - </p>
                 </div>
               </div>
-        
               <div>
                 <div class="ratings-heading">
                   <p id="rotten_tomatoes">Rotten Tomatoes</p>
                 </div>
                 <div class="ratings-item">
-                  <p id="rating2">${Ratings[1].Value}</p>
+                  <p id="rating2"> - </p>
                 </div>
               </div>
-        
               <div>
                 <div class="ratings-heading">
                   <p id="metacritic">Metacrtic</p>
                 </div>
                 <div class="ratings-item">
-                  <p id="rating3">${Ratings[2].Value}</p>
+                  <p id="rating3"> - </p>
                 </div>
               </div>
-            </div>
-        
-            <div class="movie_details">
+            </div>`
+
+          movie.innerHTML +=
+           `<div class="movie_details">
               <div class="details-heading">
                 <p id="label_director">Director:</p>
               </div>
@@ -102,8 +104,23 @@ form.addEventListener('submit', (e) => {
               <div class="detail-item">
                 <p id="plot">${Plot}</p>
               </div>
-            </div>`
+            </div>` 
+        
             } 
+            const rating1 = document.querySelector('#rating1')
+            const rating2 = document.querySelector('#rating2')
+            const rating3 = document.querySelector('#rating3')
+          
+        // update rating if there is a value
+         if (Ratings[0] !== undefined){
+          rating1.textContent = Ratings[0].Value
+         } 
+         if (Ratings[1] !== undefined){
+          rating2.textContent = Ratings[1].Value
+         } 
+         if (Ratings[1] !== undefined){
+          rating3.textContent = Ratings[2].Value
+         }   
         })
       })
   })
