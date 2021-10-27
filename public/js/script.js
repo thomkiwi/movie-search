@@ -46,7 +46,7 @@ form.addEventListener('submit', (e) => {
                 <p id="year">(${Year})</p>
                </div>`
 
-        movie.innerHTML +=
+           movie.innerHTML +=
             `<div class="movie_ratings">
               <div>
                 <div class="ratings-heading">
@@ -104,22 +104,22 @@ form.addEventListener('submit', (e) => {
                 <p id="plot">${Plot}</p>
               </div>
             </div>` 
-        
-            } 
             const rating1 = document.querySelector('#rating1')
             const rating2 = document.querySelector('#rating2')
             const rating3 = document.querySelector('#rating3')
-          
-        // update rating if there is a value
-         if (Ratings[0] !== undefined){
-          rating1.textContent = Ratings[0].Value
-         } 
-         if (Ratings[1] !== undefined){
-          rating2.textContent = Ratings[1].Value
-         } 
-         if (Ratings[1] !== undefined){
-          rating3.textContent = Ratings[2].Value
-         }   
+            
+          // update rating if there is a value
+           if (Ratings[0] !== undefined){
+            rating1.textContent = Ratings[0].Value
+           } 
+           if (Ratings[1] !== undefined){
+            rating2.textContent = Ratings[1].Value
+           } 
+           if (Ratings[1] !== undefined){
+            rating3.textContent = Ratings[2].Value
+           }   
+          } 
+
         })
       })
   })
