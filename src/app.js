@@ -25,7 +25,7 @@ app.get('/movies', (req, res) => {
       })
     })
     .catch(error => {
-      error.message;
+      console.log(error.message);
   });
 })
 

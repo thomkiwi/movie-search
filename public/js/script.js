@@ -23,9 +23,10 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const search = input.value;
-
-  fetch('/movies?search=' + search).then((response) => {
-    response.json().then((dataObj) => {
+ 
+  fetch('/movies?search=' + search)
+    .then((response) => response.json())
+    .then((dataObj) => {
       const data = dataObj.data;
 
       const { Title, Year, imdbID, Director, Writer, Actors, Plot, Ratings, Type  } = data;
@@ -122,4 +123,4 @@ form.addEventListener('submit', (e) => {
 
         })
       })
-  })
+
