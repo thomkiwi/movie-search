@@ -197,3 +197,16 @@ footer p {
   color: var(--icon-hover);
   transition: 0.2s;
 }
+
+@media (max-width: 420px) {
+  input{
+    width:90%;
+    border-radius: 10px 10px 0 0;
+    padding-bottom: 55px;
+
+  }
+  button {
+    width:90%;
+    border-radius: 0 0 10px 10px;
+ }
+}
