@@ -29,7 +29,9 @@ form.addEventListener('submit', (e) => {
     .then((dataObj) => {
       const data = dataObj.data;
 
-      const { Title, Year, imdbID, Director, Writer, Actors, Plot, Ratings, Type  } = data;
+      const { Title, Year, imdbID, Director, Writer, Actors, Plot, Ratings, Type, Poster } = data;
+
+      console.log(Poster)
 
         if (Type !== "movie"){
           // handle when it's not a movie (tv show for example)
@@ -44,7 +46,7 @@ form.addEventListener('submit', (e) => {
                 <h1 id="title">
                   <a href="https://www.imdb.com/title/${imdbID}/" target="_blank" rel="noopener noreferrer">${Title}</a>
                 </h1>
-                <p id="year">(${Year})</p>
+                <p id="year">(${Year})</p> 
                </div>`
 
            movie.innerHTML +=
@@ -77,6 +79,12 @@ form.addEventListener('submit', (e) => {
 
           movie.innerHTML +=
            `<div class="movie_details">
+           
+            <div class="poster">
+              <img src="${Poster}">
+            </div>
+
+            <div class="detailsContainer">
               <div class="details-heading">
                 <p id="label_director">Director:</p>
               </div>
@@ -104,7 +112,9 @@ form.addEventListener('submit', (e) => {
               <div class="detail-item">
                 <p id="plot">${Plot}</p>
               </div>
-            </div>` 
+            </div>
+            </div>`
+
             const rating1 = document.querySelector('#rating1')
             const rating2 = document.querySelector('#rating2')
             const rating3 = document.querySelector('#rating3')

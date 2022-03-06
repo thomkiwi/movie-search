@@ -107,7 +107,7 @@ header h2{
   padding-top: 1rem;
 }
 
-
+/* JS HTML*/
 .movie {
   background-color: #d7c6dd66;
   border-radius: 10px;
@@ -147,11 +147,19 @@ header h2{
   color: var(--lessdark);
   font-size: 1.4em;
 }
+
+.poster{
+  text-align: center;
+}
+.detailsContainer{
+
+}
 .movie_details {
   padding: 12px 12px 24px 12px;
   background-color: var(--white);
   border-radius: 0 0 10px 10px;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+
 }
 .details-heading {
   padding: 10px 0 5px 0;
@@ -209,4 +217,13 @@ footer p {
     width:90%;
     border-radius: 0 0 10px 10px;
  }
+}
+
+
+
+@media (min-width: 680px) {
+  .movie_details{
+    display: flex;
+    gap: 2rem;
+  } 
 }
