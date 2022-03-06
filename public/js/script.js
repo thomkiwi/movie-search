@@ -8,7 +8,7 @@ warning.classList.add('warning');
 const text = document.createElement('p');
 text.classList.add('warning-text');
 
-main = document.querySelector('.main');
+main = document.querySelector('main');
 warning.appendChild(text);
 
 main.appendChild(warning);

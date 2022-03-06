@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Search for a movie">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
   <link rel="icon" href="/icon.png">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,23 +17,42 @@
 
 <body>
 
-  <div class="main">
-
   <header>
-    <form>
-      <input type="search" onfocus=this.value='' value="Cast Away" required>
-      <button id="mybutton" type="submit" name="button">Search &#x1F50E;</button>
-    </form>
+      <h1>MOVIE TIME</h1>
+      <h2>Find a film to watch</h2>
+      <p id="popcorn">🍿</p>
+      <div class="movieSearch">
+        <form>
+          <input type="search" onfocus=this.value='' placeholder="Type a movie name..." required>
+          <button id="mybutton" type="submit" name="button">Search</button> 
+        </form>
+      </div>
   </header>
 
-  </div>
-  <script src="/js/script.js"></script>
+  <main>
   </main>
 
+  <footer class="container-fluid text-center">
+    <a href="#home" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <br><br>
+    <a href="mailto:thomasmooney26@gmail.com" target="_blank">
+      <i class="fas fa-envelope" aria-hidden="true"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/thomasmooney26/" target="_blank">
+      <i class="fab fa-linkedin" aria-hidden="true"></i>
+    </a>
+    <a href="https://www.github.com/thomkiwi" target="_blank">
+      <i class="fab fa-github" aria-hidden="true"></i>
+    </a>
+  
+    <br>
+    <p>&copy; All rights reserved 2019</p>
+  </footer>
 
-  <div class="footer">
-    <p class="">&#169; 2021 Thomas</p>
-  </div>
+
+    <script src="/js/script.js"></script>
+
 </body>
-
 </html>
