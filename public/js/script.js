@@ -31,8 +31,6 @@ form.addEventListener('submit', (e) => {
 
       const { Title, Year, imdbID, Director, Writer, Actors, Plot, Ratings, Type, Poster } = data;
 
-      console.log(Poster)
-
         if (Type !== "movie"){
           // handle when it's not a movie (tv show for example)
           movie.innerHTML = ''

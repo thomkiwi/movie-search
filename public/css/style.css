@@ -94,10 +94,12 @@ header h1 {
   color: rgb(255, 255, 255);
   font-size: 40px;
   font-weight: 600;
+  text-shadow:  0 6px 4px rgba(7, 2, 28, 0.16);
 }
 header h2{
   color: #712497;
   font-size: 20px;
+  text-shadow:  0 6px 4px rgba(7, 2, 28, 0.16);
 }
 #popcorn{
   font-size: 50px;
@@ -218,8 +220,6 @@ footer p {
     border-radius: 0 0 10px 10px;
  }
 }
-
-
 
 @media (min-width: 680px) {
   .movie_details{
