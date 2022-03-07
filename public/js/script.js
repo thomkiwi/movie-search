@@ -29,7 +29,7 @@ form.addEventListener('submit', (e) => {
     .then((dataObj) => {
       const data = dataObj.data;
 
-      const { Title, Year, imdbID, Director, Writer, Actors, Plot, Ratings, Type, Poster } = data;
+      const { Title, Year, imdbID, Director, Writer, Actors, Plot, Ratings, Type, Poster, Runtime, Genre } = data;
 
         if (Type !== "movie"){
           // handle when it's not a movie (tv show for example)
@@ -110,6 +110,9 @@ form.addEventListener('submit', (e) => {
               <div class="detail-item">
                 <p id="plot">${Plot}</p>
               </div>
+              <span class="keyword">${Runtime}</span>
+              <span class="keyword">${Genre}</span>
+  
             </div>
             </div>`
 
