@@ -11,8 +11,6 @@ text.classList.add('warning-text');
 main = document.querySelector('main');
 warning.appendChild(text);
 
-main.appendChild(warning);
-
 // movie
 const movie = document.createElement('div');
 movie.classList.add('movie')
@@ -31,9 +29,13 @@ form.addEventListener('submit', (e) => {
 
       const { Title, Year, imdbID, Director, Writer, Actors, Plot, Ratings, Type, Poster, Runtime, Genre } = data;
 
+
+      console.log(data)
+
         if (Type !== "movie"){
           // handle when it's not a movie (tv show for example)
           movie.innerHTML = ''
+          main.appendChild(warning);
           text.textContent = `No movie found with the title of '${search}'. Please search again.`
         } 
         
@@ -98,7 +100,7 @@ form.addEventListener('submit', (e) => {
               </div>
         
               <div class="details-heading">
-                <p id="label_actors">Actors:</p>
+                <p id="label_actors">Starring:</p>
               </div>
               <div class="detail-item">
                 <p id="actors">${Actors}</p>

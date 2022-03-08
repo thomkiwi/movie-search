@@ -189,12 +189,11 @@ header h2{
 }
 
 .warning{
-
+  padding: 40px;
 }
 .warning-text{
   color:var(--lessdark);
-  padding: 20px;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 /* footer*/
