@@ -17,14 +17,17 @@
   margin: 0;
   font-size: 1.0em;
 }
+
 body {
   background-color: var(--background);
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Readex Pro', sans-serif;
 }
+
 main {
   max-width: 800px;
   margin: auto;
 }
+
 input[type=search] {
   padding: 15px;
   border: 0;
@@ -32,11 +35,12 @@ input[type=search] {
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
   font-size: 1.3em;
 }
+
 input:focus {
   background-color: var(--background);
   outline: none;
   border-bottom: 2px solid #eee;
-  box-shadow:  0 10px 4px rgba(7, 2, 28, 0.16);
+  box-shadow: 0 10px 4px rgba(7, 2, 28, 0.16);
   transition: 0.5s;
 }
 
@@ -46,19 +50,20 @@ button,
 input {
   text-align: center;
   color: #999;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Readex Pro', sans-serif;
   border-radius: 10px 0 0 10px;
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--green1);
 }
+
 a:hover {
   color: var(--green2);
 }
 
-h1{
+h1 {
   font-size: 1.5em;
   color: var(--lesswhite);
 }
@@ -77,11 +82,12 @@ button {
   appearance: none;
   -webkit-appearance: none;
 }
-button:hover{
+
+button:hover {
   transition: ease;
   border: 0;
   background-color: var(--green2);
-  box-shadow:  0 15px 4px rgba(7, 2, 28, 0.16);
+  box-shadow: 0 15px 4px rgba(7, 2, 28, 0.16);
   transition: 0.5s;
 }
 
@@ -90,20 +96,25 @@ header {
   text-align: center;
   background-image: linear-gradient(to right top, #672899, #bb0a86, #f02a64, #ff683b, #ffa500);
 }
+
 header h1 {
   color: rgb(255, 255, 255);
   font-size: 40px;
   font-weight: 600;
-  text-shadow:  0 6px 4px rgba(7, 2, 28, 0.16);
+  text-shadow: 0 6px 4px rgba(7, 2, 28, 0.16);
+  font-family: 'Darumadrop One', cursive;
 }
-header h2{
+
+header h2 {
   color: #712497;
   font-size: 20px;
-  text-shadow:  0 6px 4px rgba(7, 2, 28, 0.16);
+  text-shadow: 0 6px 4px rgba(7, 2, 28, 0.16);
 }
-#popcorn{
+
+#popcorn {
   font-size: 50px;
 }
+
 .movieSearch {
   margin: 20px;
   padding-top: 1rem;
@@ -116,46 +127,54 @@ header h2{
   margin: 10px;
   transition: 2s;
 }
-.movie_header{
+
+.movie_header {
   padding: 15px;
   text-align: center;
 }
-#title{
+
+#title {
   font-size: 1.7rem;
 }
-#year{
+
+#year {
   padding-top: 4px;
   font-size: 1.2rem;
 }
+
 /* row 2 */
-.movie_ratings{
+.movie_ratings {
   display: flex;
   justify-content: space-around;
   padding-bottom: 12px;
 }
-.ratings-heading{
+
+.ratings-heading {
   display: flex;
   justify-content: space-around;
 }
+
 .ratings-heading p {
   font-size: 0.8em;
 }
-.ratings-item{
+
+.ratings-item {
   padding-top: 5px;
   display: flex;
   justify-content: space-around;
 }
+
 .ratings-item p {
   color: var(--lessdark);
   font-size: 1.4em;
 }
 
-.poster{
+.poster {
   text-align: center;
 }
-.detailsContainer{
 
-}
+.detailsContainer {}
+
 .movie_details {
   padding: 12px 12px 24px 12px;
   background-color: var(--white);
@@ -163,11 +182,13 @@ header h2{
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 
 }
+
 .details-heading {
   padding: 10px 0 5px 0;
 }
+
 .details-heading p {
-  color:var(--green1);
+  color: var(--green1);
   text-align: left;
   font-size: 0.8em;
   text-transform: uppercase;
@@ -176,6 +197,7 @@ header h2{
   border-bottom: solid 2px rgb(241, 241, 241);
   border-radius: 0;
 }
+
 .detail-item p {
   color: #1f1e1e;
   font-size: 1.2em;
@@ -183,16 +205,18 @@ header h2{
   line-height: 1.6;
   padding-bottom: 10px;
 }
+
 .detail-item p:hover {
   border-radius: 0;
   text-decoration: dotted;
 }
 
-.warning{
+.warning {
   padding: 40px;
 }
-.warning-text{
-  color:var(--lessdark);
+
+.warning-text {
+  color: var(--lessdark);
   font-size: 1.4rem;
 }
 
@@ -201,49 +225,58 @@ footer {
   padding: 10px 0 30px;
   text-align: center;
 }
+
 footer p {
   color: hsl(0, 0%, 60%);
   text-align: center;
   margin-top: 5px;
   font-size: 0.8em;
 }
-.fab, .far, .fas {
+
+.fab,
+.far,
+.fas {
   color: var(--icon);
   font-size: 2.00em !important;
   padding: 5px 5px;
 }
-.fab:hover,.far:hover, .fas:hover {
+
+.fab:hover,
+.far:hover,
+.fas:hover {
   color: var(--icon-hover);
   transition: 0.2s;
 }
 
 @media (max-width: 420px) {
-  input{
-    width:90%;
+  input {
+    width: 90%;
     border-radius: 10px 10px 0 0;
     padding-bottom: 55px;
 
   }
+
   button {
-    width:90%;
+    width: 90%;
     border-radius: 0 0 10px 10px;
- }
+  }
 }
 
 @media (min-width: 680px) {
-  .movie_details{
+  .movie_details {
     display: flex;
     gap: 2rem;
-  } 
+  }
 }
 
-.keyword{
+.keyword {
   background-color: #ff683b;
   color: #fff;
   padding: 4px;
   font-size: 0.8em;
   border-radius: 3px;
 }
-.keyword:hover{
+
+.keyword:hover {
   background-color: rgb(185, 71, 43);
 }
