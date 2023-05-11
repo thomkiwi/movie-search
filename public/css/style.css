@@ -270,11 +270,11 @@ footer p {
 .keyword {
   background-color: #ff683b;
   color: #fff;
-  padding: 4px;
+  padding: 4px 8px;
   font-size: 0.8em;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .keyword:hover {
-  background-color: rgb(185, 71, 43);
+  background-color: #bb0a86;
 }
