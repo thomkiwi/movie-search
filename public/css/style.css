@@ -170,8 +170,6 @@ header h2 {
   text-align: center;
 }
 
-.detailsContainer {}
-
 .movie_details {
   padding: 12px 12px 24px 12px;
   background-color: var(--white);
