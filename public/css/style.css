@@ -1,13 +1,11 @@
 :root {
-  --green1: #ff683b;
-  --green2: #581f86;
+  --green1: #41de85;
+  --green2: #5fae81;
   --white: #fff;
   --lesswhite: #eee;
   --dark1: #111;
   --background: rgb(250, 250, 250);
   --lessdark: #444;
-  --icon: #712497;
-  --icon-hover: #ff683b;
 }
 
 *,
@@ -236,7 +234,7 @@ footer p {
 .fab,
 .far,
 .fas {
-  color: var(--icon);
+  color: var(--lessdark);
   font-size: 2.00em !important;
   padding: 5px 5px;
 }
@@ -244,7 +242,7 @@ footer p {
 .fab:hover,
 .far:hover,
 .fas:hover {
-  color: var(--icon-hover);
+  color: var(--dark1);
   transition: 0.2s;
 }
 

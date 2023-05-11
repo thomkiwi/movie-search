@@ -1,8 +1,7 @@
 const form = document.querySelector('form');
 const input = document.querySelector('input');
 
-
-
+// clear placeholder text on click
 input.addEventListener("focus", function() {
   this.removeAttribute("placeholder");
 });
