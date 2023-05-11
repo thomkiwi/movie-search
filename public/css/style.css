@@ -66,7 +66,6 @@ h1 {
   color: var(--lesswhite);
 }
 
-
 button {
   padding: 15px;
   cursor: pointer;
@@ -104,9 +103,9 @@ header h1 {
 }
 
 header h2 {
-  color: #712497;
+  color:#f8a257;
   font-size: 20px;
-  text-shadow: 0 6px 4px rgba(7, 2, 28, 0.16);
+  text-shadow: 0 3px 4px rgba(7, 2, 28, 0.16);
 }
 
 #popcorn {
