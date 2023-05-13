@@ -34,14 +34,15 @@ function getMovies() {
 
     const data = dataObj.data;
   
-    const { Title, Year, imdbID, Director, Writer, Actors, Plot, Ratings, Type, Poster, Runtime, Genre } = data;
+    const { Title, Year, imdbID, Director, Writer, Actors, Plot, Ratings, Type, Poster, Runtime, Genre, Rated, Language } = data;
+
+    console.log(data)
     
-    
+    // handle when it's not a movie (tv show for example)
     if (Type !== "movie"){
-              // handle when it's not a movie (tv show for example)
       movie.innerHTML = ''
       main.appendChild(warning);
-      text.textContent = `No movie found with the title of '${search}'. Please search again.`
+      text.innerHTML = `<i class="fa-regular fa-face-sad-cry"></i></i><br>No movie found with the title of <b>'${search}'</b>. Please search again.`
     } 
             
     if (Type === "movie"){
@@ -118,6 +119,8 @@ function getMovies() {
             <p id="plot">${Plot}</p>
           </div>
           <span class="keyword">${Runtime}</span>
+          <span class="keyword">Rated ${Rated}</span>
+          <span class="keyword">${Language}</span>
           <span class="keyword">${Genre}</span>
 
         </div>

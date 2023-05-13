@@ -29,7 +29,6 @@ main {
 input[type=search] {
   padding: 15px;
   border: 0;
-  border-bottom: 1px solid var(--lesswhite);
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
   font-size: 1.3em;
 }
@@ -37,7 +36,7 @@ input[type=search] {
 input:focus {
   background-color: var(--background);
   outline: none;
-  border-bottom: 2px solid #eee;
+  /* border-bottom: 2px solid #eee; */
   box-shadow: 0 10px 4px rgba(7, 2, 28, 0.16);
   transition: 0.5s;
 }
@@ -65,6 +64,10 @@ h1 {
   font-size: 1.5em;
   color: var(--lesswhite);
 }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #c5c4c4;
+  opacity: 1; /* Firefox */
+}
 
 button {
   padding: 15px;
@@ -84,7 +87,7 @@ button:hover {
   transition: ease;
   border: 0;
   background-color: var(--green2);
-  box-shadow: 0 15px 4px rgba(7, 2, 28, 0.16);
+  box-shadow: 0 10px 4px rgba(7, 2, 28, 0.16);
   transition: 0.5s;
 }
 
@@ -175,11 +178,15 @@ header h2 {
   background-color: var(--white);
   border-radius: 0 0 10px 10px;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-
 }
 
 .details-heading {
   padding: 10px 0 5px 0;
+}
+
+.fa-face-sad-cry{
+  font-size: 50px;
+  padding-bottom: 20px; 
 }
 
 .details-heading p {
@@ -243,12 +250,11 @@ footer p {
   transition: 0.2s;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 443px) {
   input {
     width: 90%;
     border-radius: 10px 10px 0 0;
     padding-bottom: 55px;
-
   }
 
   button {
@@ -268,10 +274,12 @@ footer p {
   background-color: #ff683b;
   color: #fff;
   padding: 4px 8px;
+  line-height: 2.2em;
   font-size: 0.8em;
+  white-space: pre;
   border-radius: 5px;
 }
 
 .keyword:hover {
-  background-color: #bb0a86;
+  background-color: #f02a64;
 }
